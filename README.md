@@ -1,8 +1,8 @@
-# Arduino Serial Send/Receive Example
-A quick implementation of sending/receiving data via a serial device, such as an XBee controller
+# Arduino XBee Send/Receive Example
+A quick implementation of sending/receiving data via an XBee controller
 
 ## Usage
-Simply download a ZIP of this repository from [this link](https://github.com/HCDE439/ArduinoSerialSendReceive-Example/archive/master.zip) and run the code on your Arduino.
+Simply download a ZIP of this repository from [this link](https://github.com/HCDE439/ArduinoXBeeSendReceive-Example/archive/master.zip) and run the code on your Arduino.
 
 ## What's going on?
 ### Sending a message
