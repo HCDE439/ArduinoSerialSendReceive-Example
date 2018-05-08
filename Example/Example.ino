@@ -44,7 +44,7 @@ void loop() {
     char c = xBee.read();
     
     if (isAlphaNumeric(c) || c == ' ') {
-      buff += c;
+      buff = buff + c;
     } else {
 
       // Check the message for keywords

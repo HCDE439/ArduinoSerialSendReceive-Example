@@ -17,9 +17,9 @@ if (xBee.available() > 0) {
     char c = xBee.read();
 
     if (isAlphaNumeric(c) || c == ' ') {
-        buff += c;
+        buff = buff + c;
     } else {
-        ...
+        /* Your code goes here */
         buff = "";
     }
 }
