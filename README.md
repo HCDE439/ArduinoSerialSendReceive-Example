@@ -42,4 +42,4 @@ else if (buff.equals("led")) {
 We can compare strings using `equals`. This returns a `boolean` for whether or not the strings are the same. There are other functions for comparing characters, splitting strings, etc. that can be found in the [`String()` documentation](https://www.arduino.cc/reference/en/language/variables/data-types/stringobject/).
 
 # License
-MIT
+TBA
