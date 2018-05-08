@@ -11,8 +11,9 @@ const int ledPin = 13;
 const int buttonPin = 7;
 const int buzzerPin = 12;
 
-SoftwareSerial xBee(2, 3);
-Button button(buttonPin, INPUT_PULLUP);
+SoftwareSerial xBee(2, 3);              // These values (2, 3) represent (TX, RX) on the XBee.
+Button button(buttonPin, INPUT_PULLUP); // Utilizes a pull-up resistor in the Arduino so we don't
+                                        // need an additional resistor.
 
 String buff;
 
@@ -28,6 +29,15 @@ void setup() {
 }
 
 void loop() {
+
+  int buttonState = button.checkButtonAction();
+
+  if (buttonState == Button::CLICKED) {
+
+    // This example uses println, which automatically adds a newline, or '\n' after each message.
+    // Conveniently, our "receive" code looks for any character that is not a letter, number, or space.
+    xBee.println("buzzer");
+  }
   
   // Reads data from the port until we find a character that is not a letter, number, or space
   if (xBee.available() > 0) {
@@ -50,14 +60,5 @@ void loop() {
       }
       buff = "";
     }
-  }
-
-  int buttonState = button.checkButtonAction();
-
-  if (buttonState == Button::CLICKED) {
-
-    // This example uses println, which automatically adds a newline, or '\n' after each message.
-    // Conveniently, our "receive" code looks for any character that is not a letter, number, or space.
-    xBee.println("buzzer");
   }
 }
